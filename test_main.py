@@ -4,7 +4,6 @@ Tests for jwt flask app.
 import os
 import json
 import pytest
-
 import main
 
 SECRET = 'TestSecret'
@@ -20,8 +19,7 @@ def client():
 
     yield client
 
-
-
+# Test to check if the response is ok
 def test_health(client):
     response = client.get('/')
     assert response.status_code == 200
